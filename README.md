@@ -3,5 +3,8 @@
 # [x] Drizzle set up
 # [x] Create the query provider
 # [x] Create a hook to check login status
-# [] UI
-# [] react-query
+# [x] UI
+# [x] react-query
+# [] create new drizzle schema to create quotes
+# [] UI for quotes
+# [] RPC
