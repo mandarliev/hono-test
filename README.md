@@ -5,6 +5,6 @@
 # [x] Create a hook to check login status
 # [x] UI
 # [x] react-query
-# [] create new drizzle schema to create quotes
-# [] UI for quotes
-# [] RPC
+# [x] create new drizzle schema to create quotes
+# [x] UI for quotes
+# [x] RPC
