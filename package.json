@@ -16,6 +16,7 @@
     "@auth/drizzle-adapter": "^1.5.0",
     "@hono/auth-js": "^1.0.10",
     "@neondatabase/serverless": "^0.9.5",
+    "@tanstack/react-query": "^5.56.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "db-migrate": "^0.11.14",
