@@ -7,11 +7,13 @@ import {
 } from "@hono/auth-js";
 import GitHub from "@auth/core/providers/github";
 import { handle } from "hono/vercel";
+import {DrizzleAdapter} from "@auth/drizzle-adapter"
 
 // Basically following this guide
 // https://github.com/honojs/middleware/tree/main/packages/auth-js#authjs-middleware-for-hono
 
 import todos from "./todos";
+import { db } from "@/db/drizzle";
 
 export const runtime = "edge";
 
@@ -30,6 +32,7 @@ app.route("/todos", todos);
 
 function getAuthConfig(c: Context): AuthConfig {
   return {
+    adapter: DrizzleAdapter(db),
     // Instead of c.env, I have to use process.env
     // since it was initially set to work w/ Cloudflare workers
     secret: process.env.AUTH_SECRET,

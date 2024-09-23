@@ -6,16 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate --dialect=postgresql --schema=db/schema.ts --out=./drizzle",
+    "db:migrate": "tsx ./migrate.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@auth/core": "^0.35.0",
+    "@auth/drizzle-adapter": "^1.5.0",
     "@hono/auth-js": "^1.0.10",
+    "@neondatabase/serverless": "^0.9.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "db-migrate": "^0.11.14",
+    "drizzle-orm": "^0.33.0",
     "hono": "^4.6.2",
     "lucide-react": "^0.445.0",
     "next": "14.2.13",
+    "next-auth": "^4.24.7",
+    "pg": "^8.13.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.2",
@@ -25,10 +34,14 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.24.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "postcss": "^8",
+    "postgres": "^3.4.4",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.1",
     "typescript": "^5"
   }
 }
